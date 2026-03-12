@@ -74,7 +74,7 @@ export function open_box(box) {
 export function generate_box() {
         let rarity = weighted_random(base_rarity_weights);
         if (get_nebulamode()) {
-                rarity = nebula_rarity_weights;
+                rarity = weighted_random(nebula_rarity_weights);
         }
         const valid = Object.values(boxes).filter((box) => box.rarities.includes(rarity) && box !== boxes.debugbox);
         const box = valid[Math.floor(Math.random() * valid.length)];

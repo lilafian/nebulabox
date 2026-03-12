@@ -1,4 +1,4 @@
-import { click, multiply_clicks } from "./clicker.js";
+import { click } from "./clicker.js";
 import { get_inv_item } from "./inventory.js";
 import { items } from "./items.js";
 
@@ -12,10 +12,6 @@ export function mod_click_extra(amt) {
         for (let i = 0; i < amt; i++) {
                 click(true);
         }
-}
-
-export function mod_click_multiply(amt) {
-        multiply_clicks(amt);
 }
 
 export function mod_tick_sun_synergy(tick, base) {

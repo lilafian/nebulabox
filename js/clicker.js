@@ -50,12 +50,6 @@ export function check_nebulamode() {
         return true;
 }
 
-export function multiply_clicks(multiplier) {
-        const before_total = total_clicks;
-        total_clicks = Math.round(total_clicks * multiplier);
-        clicks_to_next -= (total_clicks - before_total);
-}
-
 export function get_clicker_info() {
         return {
                 clicks: total_clicks,
@@ -77,6 +71,11 @@ export function set_clicker_info(clicks, nlevel, nnebulamode, ntick, clicks_left
 
 export function set_nebulamode(val) {
         nebulamode = val;
+        if (nebulamode) {
+                document.body.style.background = "var(--nebulamode-gradient)";
+                document.body.style.backgroundSize = "400% 400%";
+                document.body.style.animation = "nebulamode-gradient 120s infinite";
+        }
 }
 
 export function get_nebulamode() {
@@ -110,7 +109,7 @@ export function next_level() {
 
         display_cursor_notification(`dropped ${rarity_to_string(box.rarity)} ${box.name} (now level ${level})`);
 
-        clicks_to_next = Math.ceil(Math.pow(1.5, level - 1));
+        clicks_to_next = Math.ceil(1 + Math.pow(level - 1, 1.5));
 
         update_clicker_text();
 }

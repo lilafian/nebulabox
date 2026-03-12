@@ -1,4 +1,4 @@
-import { mod_tick_autoclick, mod_click_extra, mod_click_multiply, mod_tick_sun_synergy } from "./basic_mods.js";
+import { mod_tick_autoclick, mod_click_extra, mod_tick_sun_synergy } from "./basic_mods.js";
 import { tps } from "./clicker.js";
 
 export const box_rarities = {
@@ -303,7 +303,7 @@ export const items = {
                 19,
                 [
                         [],
-                        [new Modifier("1.01x clicks every click", "twin jet nebula", modifier_types.click, () => mod_click_multiply(1.01))]
+                        []
                 ]
         ),
         butterflynebula: new ItemDef(
@@ -318,8 +318,7 @@ export const items = {
                 "a vibrant red, blue, and green nebula",
                 [box_rarities.veryrare],
                 26,
-                [
-                        [new Modifier("1.01x clicks every click", "cat's eye nebula", modifier_types.click, () => mod_click_multiply(1.01))]
+                [[]
                 ]
         ),
         alphacentauri: new ItemDef(
@@ -328,8 +327,7 @@ export const items = {
                 [box_rarities.veryrare, box_rarities.ultrarare],
                 30,
                 [
-                        [new Modifier("1.01x clicks every click", "alpha centauri", modifier_types.click, () => mod_click_multiply(1.01))],
-                        [new Modifier("1.03x clicks every click", "alpha centauri", modifier_types.click, () => mod_click_multiply(1.03))],
+                        [],[]
                 ]
         )
 };

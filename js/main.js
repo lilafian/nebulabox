@@ -33,3 +33,4 @@ page_game.addEventListener("click", disable_overlay);
 page_notis.addEventListener("click", display_notification_log);
 page_shop.addEventListener("click", () => display_cursor_notification("shop is not implemented yet!", 0, true));
 page_progression.addEventListener("click", () => display_cursor_notification("progression is not implemented yet!", 0, true));
+btn_help.addEventListener("click", display_welcome);

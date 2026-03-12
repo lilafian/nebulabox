@@ -21,6 +21,16 @@
         #ff1ce5,
         #ff001e
         );
+        --nebulamode-gradient: linear-gradient(
+        295deg,
+        #000000,
+        #24080d,
+        #541b25,
+        #953b35,
+        #804755,
+        #bf9d86,
+        #5f667b
+        );
 }
 
 body {
@@ -162,6 +172,7 @@ a {
 .game {
         display: flex;
         width: 100vw;
+        backdrop-filter: brightness(30%);
 }
 
 .mainpane {
@@ -217,4 +228,10 @@ a {
         to {
                 opacity: 0%;
         }
+}
+
+@keyframes nebulamode-gradient {
+    0%{background-position:9% 0%}
+    50%{background-position:92% 100%}
+    100%{background-position:9% 0%}
 }

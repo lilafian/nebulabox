@@ -1,5 +1,5 @@
 import { open_box } from "./boxutils.js";
-import { box_rarities, items, Item } from "./items.js";
+import { box_rarities, items, Item, ItemDef } from "./items.js";
 import { display_cursor_notification } from "./notification.js";
 import { add_modifier, remove_modifier, set_nebulamode } from "./clicker.js";
 
@@ -36,9 +36,8 @@ export function get_inv_box() {
 }
 
 export function set_inv_box(inv) {
-        box_inventory = inv;
         for (const item of inv) {
-                add_inv_ele(item);
+                inventory_add(item);
         }
         update_values();
 }
@@ -48,12 +47,22 @@ export function get_inv_item() {
 }
 
 export function set_inv_item(inv) {
-        item_inventory = inv;
         for (const item of inv) {
-                const defarr = Object.values(items).filter((nitem) => nitem.name === item.name);
+                let defarr = Object.values(items).filter((nitem) => nitem.name === item.name);
+                if (defarr.length === 0) {
+                        defarr = [
+                                new ItemDef(
+                                        "universal extension",
+                                        "bends the universe to reveal rarer items. collector's favorite.",
+                                        [box_rarities.mythical],
+                                        0,
+                                        [[]]
+                                )
+                        ];
+                }
                 const fixeditem = new Item(defarr[0], item.rarity);
                 fixeditem.itemid = item.itemid;
-                add_inv_ele(fixeditem);
+                inventory_add(fixeditem);
         }
         update_values();
 }

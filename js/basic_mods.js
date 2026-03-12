@@ -39,7 +39,6 @@ export function mod_tick_sun_synergy(tick, base) {
                         cooldown = Math.round(cooldown * 0.9);
                 }
         }
-        console.log(cooldown);
 
         if (tick % cooldown === 0) {
                 click();

@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+        <head>
+                <title>nebulabox</title>
+                <link rel="stylesheet" href="style.css" />
+        </head>
+        <body>
+                <div class="tophdr">
+                        <span class="title">nebulabox v0.9.1-testing</span>
+                        <a href=""><span class="news">update v0.9.1 - notification log</span></a>
+                        <span class="splash" id="splash">splash text here</span>
+                </div>
+                <div class="game">
+                        <div class="mainpane">
+                                <div class="itemsbi">
+                                        <div id="boxescontainer" class="container">
+                                                <span class="hdr">owned boxes</span>
+                                                <span class="value" id="boxval">$0</span>
+                                                <div id="boxes" class="itemcontainer"></div>
+                                        </div>
+                                        <div id="itemscontainer" class="container">
+                                                <span class="hdr">owned items</span>
+                                                <span class="value" id="itemval">$0</span>
+                                                <div id="items" class="itemcontainer"></div>
+                                        </div>
+                                </div>
+                                <div id="bottom" class="itemsbi">
+                                        <div id="dropcontainer">
+                                                <span class="hdr">box drops</span>
+                                                <div id="drops" class="itemcontainer"></div>
+                                        </div>
+                                        <div id="clickercontainer">
+                                                <span class="hdr">clicker</span>
+                                                <span class="value" id="clicks">0 clicks</span>
+                                                <div id="clicker" class="itemcontainer">
+                                                        <span id="clicksleft">1 click until drop</span>
+                                                        <span id="level">level 1</span>
+                                                        <span id="modifiers"></span>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div id="overlayedpane"></div>
+                        </div>
+                        <div class="sidebar">
+                                <div class="pages">
+                                        <span class="sidebtn top" id="page-game"         >game</span>
+                                        <span class="sidebtn top" id="page-notifications">notifications</span>
+                                        <span class="sidebtn top" id="page-shop"         >shop</span>
+                                        <span class="sidebtn top" id="page-progression"  >progression</span>
+                                </div>
+                                <div class="pages">
+                                        <span class="sidebtn btm" id="btn-help">help</span>
+                                </div>
+                        </div>
+                </div>
+                <script src="js/main.js" type="module"></script>
+                <script src="js/splash.js" type="module"></script>
+        </body>
+</html>

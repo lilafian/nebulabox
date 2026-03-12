@@ -1,0 +1,220 @@
+:root {
+        --box-rarity-common: linear-gradient(#a0a0a0);
+        --box-rarity-semicommon: linear-gradient(#c0c0c0);
+        --box-rarity-uncommon: linear-gradient(to right, #fafafa, #87b08d);
+        --box-rarity-semirare: linear-gradient(to right, #ccdbd9, #50ad9f);
+        --box-rarity-rare: linear-gradient(to right, #2f6ead, #124170);
+        --box-rarity-veryrare: linear-gradient(to right, #6736c9, #561791);
+        --box-rarity-ultrarare: linear-gradient(to right, #e5c5ed, #cc50eb);
+        --box-rarity-legendary: linear-gradient(to right, #edd8e9, #ed00be);
+        --box-rarity-ultralegendary: linear-gradient(to right, #ff7595, #ff1249);
+        --box-rarity-mythical: linear-gradient(
+        to right,
+        #ffffff,
+        #fff3db,
+        #feffc2,
+        #c7ffad,
+        #91ffde,
+        #69edff,
+        #5465ff,
+        #a73bff,
+        #ff1ce5,
+        #ff001e
+        );
+}
+
+body {
+        margin: 0;
+        background-color: black;
+        width: 100vw;
+        height: 100vh;
+        color: white;
+        font-family: monospace;
+        overflow: hidden;
+}
+
+.itemsbi {
+        display: flex;
+}
+
+h1 {
+        font-size: 20px;
+        margin: 0;
+}
+
+.container {
+        width: 50%;
+        height: 60vh;
+}
+
+#bottom {
+        margin-top: 3vh;
+}
+
+#dropcontainer, #clickercontainer {
+        width: 50%;
+        height: 30vh;
+}
+
+.itemcontainer {
+        border: 1px solid white;
+        height: 100%;
+        padding: 5px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+#clicker { 
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+}
+
+#clicker span {
+        user-select: none;
+}
+
+.item {
+        border: 1px solid white;
+        margin-bottom: 2px;
+        margin-right: 2px;
+        display: flex;
+        flex-direction: column;
+        user-select: none;
+}
+
+.itemname {
+        font-size: 16px;
+}
+
+.itemdesc {
+        font-size: 10px;
+}
+
+.itemrarity {
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+        background-size: contain;
+        width: fit-content;
+}
+
+.itemsellprice {
+        margin-top: auto;
+        margin-left: auto;
+        color: #aaffaa;
+}
+
+.value {
+        color: #aaffaa;
+}
+
+.cursornoti {
+        position: absolute;
+        animation-name: fadeout;
+        animation-duration: 5s;
+        opacity: 0;
+        user-select: none;
+        pointer-events: none;
+}
+
+.popupnoti {
+        position: absolute;
+        top: calc(37.5vh - 0.5vw);
+        left: 24.5vw;
+        width: 50vw;
+        height: 25vh;
+        border: 1px solid white;
+        background-color: black;
+        padding: 1vw;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+}
+
+.popupbtnc {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+}
+
+.popupbtn {
+        padding: 1vw;
+        border: 1px solid white;
+        flex: 1;
+}
+
+#modifiers {
+        margin-top: 1rem;
+}
+
+.tophdr {
+        display: flex;
+        justify-content: space-between;
+        height: 2vh;
+}
+
+a {
+        color: white;
+}
+
+.game {
+        display: flex;
+        width: 100vw;
+}
+
+.mainpane {
+        flex: 4;
+        position: relative;
+}
+
+.sidebar {
+        border: 1px solid white;
+        flex: 1;
+        height: calc(98vh - 12px);
+        padding: 5px;
+}
+
+.sidebar {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+}
+
+.pages {
+        display: flex;
+        flex-direction: column;
+}
+
+.sidebtn {
+        padding: 10px;
+        border: 1px solid white;
+}
+
+.top {
+        margin-bottom: 5px;
+}
+
+.btm {
+        margin-top: 5px;
+}
+
+#overlayedpane {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+}
+
+@keyframes fadeout {
+        from {
+                opacity: 100%;
+        }
+
+        to {
+                opacity: 0%;
+        }
+}

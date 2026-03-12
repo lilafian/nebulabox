@@ -4,28 +4,28 @@ import { display_cursor_notification } from "./notification.js";
 import { get_nebulamode } from "./clicker.js";
 
 const base_rarity_weights = [
+        40,
+        35,
         30,
         25,
         20,
         15,
+        10,
         5,
-        2.5,
-        1.5,
-        1,
         0,
         0
 ];
 
 const nebula_rarity_weights = [
-        6,
-        8,
-        10,
-        15,
-        20,
-        18.6,
-        11,
-        7.3,
+        0.5,
+        1,
+        2,
         4,
+        8,
+        16,
+        8,
+        4,
+        2,
         0.1
 ];
 

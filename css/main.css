@@ -1,0 +1,60 @@
+@font-face {
+    font-family: "Titillium Web";
+    src: url("../assets/fonts/titillium/TitilliumWeb-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+        background-color: black;
+        color: white;
+        margin: 1vw;
+
+        font-family: "Titillium Web", sans-serif;
+        overflow: hidden;
+        user-select: none;
+}
+
+#top-header {
+        display: flex;
+        justify-content: space-between;
+        border: 1px solid white;
+        padding: 0.5vw;
+}
+
+#game {
+        margin-top: 0.5vw;
+        height: calc(100vh - 4.5vw - 1rem);
+        border: 1px solid white;
+        display: flex;
+}
+
+#pane {
+        flex: 3;
+        padding: 0.5vw;
+}
+
+#sidebar {
+        flex: 1;
+        border-left: 1px solid white;
+        padding: 0.5vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+}
+
+.sidebar-buttons {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 0.5vw;
+}
+
+.sidebar-button {
+        border: 1px solid white;
+        padding: 0.5vw;
+}
+
+.sidebar-button-selected {
+        background-color: rgba(255, 255, 255, 0.1);
+}

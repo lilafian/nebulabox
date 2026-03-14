@@ -3,14 +3,55 @@
         <head>
                 <title>nebulabox</title>
                 <link href="css/main.css" rel="stylesheet">
+                <link href="css/clicker.css" rel="stylesheet">
+                <link href="css/inventory.css" rel="stylesheet">
         </head>
         <body>
                 <div id="top-header">
-                        <span class="header-text" id="text-version">nebulabox v0.1.0-new-testing</span>
+                        <span class="header-text" id="text-version">nebulabox v0.2.0-new-testing</span>
                         <span class="header-text" id="text-splash">splash text here!</span>
                 </div>
                 <div id="game">
-                        <div id="pane"></div>
+                        <div id="pane">
+                                <div id="clicker-content">
+                                        <div class="clicker-toptext">
+                                                <div class="clicker-toptext-top">
+                                                        <span id="clicker-level">level 136</span> 
+                                                        <span id="clicker-total">535388 total clicks</span>
+                                                </div>
+                                                <span id="clicker-remaining">11317 clicks until next drop</span>
+                                                <ul class="clicker-active-modifiers">
+                                                        <li><abbr title="50% chance to double the click power">
+                                                                        double vision (ngc 7026)
+                                                                </abbr></li>
+                                                </ul>
+                                        </div>
+                                        <div class="clicker-drops">
+                                                <span id="clicker-possible-drops-text">possible drops:</span>
+                                                <div id="clicker-possible-drops">
+                                                        <div class="item">
+                                                                <div class="item-inside">
+                                                                        <div class="item-top">
+                                                                                <span class="item-name">ngc 7026</span>
+                                                                                <span class="item-rarity" style="background-image: var(--rarity-exotic)">
+                                                                                        exotic
+                                                                                </span>
+                                                                        </div>
+                                                                        <span class="item-description">
+                                                                                a red and blue planetary nebula, surrounding a binary star system.
+                                                                        </span>
+                                                                        <ul class="item-modifiers">
+                                                                                <li><abbr title="50% chance to double the click power">
+                                                                                                double vision
+                                                                                        </abbr></li>
+                                                                        </ul>
+                                                                        <span class="item-price">&curren;500000</span>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
                         <div id="sidebar">
                                 <div class="sidebar-buttons" id="sidebar-top">
                                         <span class="sidebar-button sidebar-button-selected" id="sidebar-clicker">clicker</span>
@@ -21,10 +62,11 @@
                                 <div class="sidebar-buttons" id="sidebar-bottom">
                                         <span class="sidebar-button" id="sidebar-notifications">notifications</span>
                                         <span class="sidebar-button" id="sidebar-help">help</span>
+                                        <span class="sidebar-button" id="sidebar-settings">settings</span>
                                 </div>
                         </div>
                 </div>
 
                 <script src="js/ui/uimain.js" type="module"></script>
         </body>
-</html
+</html>

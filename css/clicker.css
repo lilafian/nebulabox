@@ -1,0 +1,14 @@
+.clicker-toptext span, #clicker-possible-drops-text, .clicker-active-modifiers {
+        font-size: 1vw;
+}
+
+.clicker-toptext-top {
+        display: flex;
+        justify-content: space-between;
+}
+
+.clicker-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+}

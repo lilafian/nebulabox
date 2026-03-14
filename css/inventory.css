@@ -1,0 +1,68 @@
+:root {
+        --rarity-worthless: linear-gradient(to right, #c1c1c1);
+        --rarity-debris: linear-gradient(to right, #bababa, #515151);
+        --rarity-abundant: linear-gradient(to right, #a8a8a8, #6c9676);
+        --rarity-scattered: linear-gradient(to right, #b3b5b3, #81d1c5);
+        --rarity-scarce: linear-gradient(to right, #abd6c8, #3cb28d);
+        --rarity-veryscarce: linear-gradient(to right, #a0efd6, #abd6c8, #3cb28d);
+        --rarity-unusual: linear-gradient(to right, #cea0ef, #c2abd6, #753cb2);
+        --rarity-rare: linear-gradient(to right, #6fc1c4, #5dd4d8, #54aaad, #197477);
+        --rarity-ultrarare: linear-gradient(to right, #6f80c4, #5d77d8, #546ead, #193377);
+        --rarity-exotic: linear-gradient(to right, #f1b8fc, #c97fd8, #b746ce);
+        --rarity-unique: linear-gradient(to right, #fcd6ed, #e2a5ca, #d64d9f);
+        --rarity-legendary: linear-gradient(to right, #fc799e, #ed5a83, #e02359, #dd0845);
+        --rarity-ultralegendary: linear-gradient(to right, #fc7981, #ed5a5c, #e02330, #dd080c);
+        --rarity-mythical: linear-gradient(to right, #fcbaba, #fcc49f, #fcef7b, #8efc5f, #37fcde, #3425fc, #c01bfc, #fc0cf8, #fc026e);
+        --rarity-supercosmic: linear-gradient(to right, #fcd4fc, #151515);
+        --rarity-unconfirmed: linear-gradient(to right, #f9a9a9, #151515);
+        --rarity-undiscovered: linear-gradient(to right, #ffffff, #151515, #ffffff);
+        --rarity-transcendent: linear-gradient(to right, #c1c1c1, #bababa, #a8a8a8, #b3b5b3, #abd6c8, #a0efd6, #cea0ef, #6fc1c4, #6f80c4, #f1b8fc, #fcd6ed, #fc799e, #fc7981, #fcbaba, #fcd4fc, #f9a9a9, #ffffff);
+}
+
+ul, li {
+        margin: 0 0 0 1rem;
+        padding: 0;
+}
+
+.item {
+        background-image: url("../assets/images/items/thumb_ngc7026.jpg");
+
+        background-size: cover;
+        background-position: center;
+        max-width: 10vw;
+        height: 16vw;
+        position: relative;
+        border: 1px solid white;
+}
+
+.item-inside {
+        height: 50%;
+        position: absolute;
+        bottom: 0;
+        padding: 0.5vw;
+        backdrop-filter: blur(5px) brightness(50%) contrast(150%);
+}
+
+.item-top {
+        display: flex;
+        justify-content: space-between;
+        font-size: 1vw;
+}
+
+.item-description {
+        text-overflow: ellipsis;
+        font-size: 0.6vw;
+}
+
+.item-rarity {
+        color: transparent;
+        background-clip: text;
+        background-size: contain;
+        width: fit-content;
+}
+
+.item-price {
+        color: #aaffaa;
+        position: absolute;
+        bottom: 0;
+}
